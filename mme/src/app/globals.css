@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f9fa;
+  --foreground: #202124;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* TipTap content polish (Google Docs-ish defaults) */
+.ProseMirror {
+  outline: none;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.ProseMirror p {
+  margin: 0;
+}
+
+.ProseMirror > * + * {
+  margin-top: 0.75em;
+}
+
+.ProseMirror h1 {
+  font-size: 20pt;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.ProseMirror h2 {
+  font-size: 16pt;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ProseMirror h3 {
+  font-size: 14pt;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* AI block styling */
+div[data-ai-block] {
+  margin: 0.75em 0;
+  border-radius: 10px;
+  border: 1px solid rgb(218 220 224);
+  background: rgb(248 249 250);
+}
+
+div[data-ai-block] > div[data-ai-block-inner] {
+  padding: 12px 12px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
