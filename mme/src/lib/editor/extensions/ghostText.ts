@@ -27,21 +27,21 @@ export const GhostText = Extension.create({
     return {
       setGhostText:
         (text: string) =>
-        ({ editor }) => {
+        ({ editor }: { editor: any }) => {
           editor.storage.ghostText.text = text
           editor.view.dispatch(editor.state.tr.setMeta(ghostTextKey, { type: 'update' }))
           return true
         },
       clearGhostText:
         () =>
-        ({ editor }) => {
+        ({ editor }: { editor: any }) => {
           editor.storage.ghostText.text = ''
           editor.view.dispatch(editor.state.tr.setMeta(ghostTextKey, { type: 'update' }))
           return true
         },
       acceptGhostText:
         () =>
-        ({ editor }) => {
+        ({ editor }: { editor: any }) => {
           const t: string = editor.storage.ghostText.text || ''
           if (!t) return false
           editor.storage.ghostText.text = ''
