@@ -14,7 +14,6 @@ export function createExtensions() {
   // #endregion agent log
   return [
     StarterKit.configure({
-      history: true,
       heading: {
         levels: [1, 2, 3],
       },
