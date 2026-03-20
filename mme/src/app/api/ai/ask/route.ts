@@ -172,7 +172,7 @@ export async function POST(req: NextRequest) {
         // Step 2: Call Claude — web_search_20250305 tool lets it browse live
         // ------------------------------------------------------------------
         const requestBody = {
-          model: 'claude-sonnet-4-20250514',
+          model: 'claude-haiku-4-5-20251001',
           max_tokens: 2000,
           temperature: mode === 'exam' ? 0.2 : 0.4,
           system,
@@ -213,7 +213,7 @@ export async function POST(req: NextRequest) {
         // Step 4: Self-review for hardware compatibility
         // ------------------------------------------------------------------
         const reviewResponse = await anthropic.messages.create({
-          model: 'claude-sonnet-4-20250514',
+          model: 'claude-haiku-4-5-20251001',
           max_tokens: 1000,
           temperature: 0.1,
           system:
