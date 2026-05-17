@@ -26,7 +26,7 @@ export function Toolbar({ editor, status, docId }: { editor: Editor | null, stat
   }, [editor])
 
   return (
-    <div className="sticky top-0 z-20 bg-white">
+    <div className="bg-white">
       {/* Header */}
       <header className="bg-white px-4 py-2 flex items-center gap-3 border-b border-[#dadce0]">
         <span style={{ color: '#4285f4', fontSize: 40 }}>

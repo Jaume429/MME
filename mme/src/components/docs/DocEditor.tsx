@@ -86,7 +86,9 @@ export function DocEditor(props: {
 
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      <Toolbar editor={editor} status={props.status} docId={props.docId} />
+      <div className="sticky top-0 z-20 shrink-0">
+        <Toolbar editor={editor} status={props.status} docId={props.docId} />
+      </div>
       <PageShell>
         <div className="px-24 py-24 flex-grow">
           <EditorContent editor={editor} />
